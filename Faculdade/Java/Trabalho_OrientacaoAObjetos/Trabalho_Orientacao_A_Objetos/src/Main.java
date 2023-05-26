@@ -34,7 +34,7 @@ public class Main {
 		}
 		
 		
-		// registring all the students
+		// Registring all the students
 		System.out.println("Quantos alunos deseja registrar?");
 		studentsSize = input.nextInt();
 		
@@ -50,24 +50,35 @@ public class Main {
 			name = input.nextLine();
 			students[i].setName(name);
 			
-			// Registrando as 3 notas dos alunos
+			// Registring grades from students
 			for(int j = 0; j < 3; j++) {
 				float grade;
 				System.out.println("Insira a nota " + (j+1) + ":");
 				grade = input.nextFloat();
 				
 				students[i].setGrades(j, professor.RegisterGrades(grade));
-				// Fiz um método específico na classe Professor para registrar as notas. Não sei se é a forma ideal, poderia só enviar o valor
-				// mas achei que seria interessante, assim somente quando se tem acesso as funções de Professor se pode dar uma nota para um aluno
+				/* 
+				English:
+				Made a method in the Professor class to register all the grades.
+				I don't know if that's the ideal way, but I thought it would be 
+				interesting, so only when you have access to the class Professor's
+				methods a grade can be given to an student
+				
+				Portuguese: 
+				Fiz um método específico na classe Professor para registrar as notas. 
+				Não sei se é a forma ideal, poderia só enviar o valor
+				mas achei que seria interessante, assim somente quando se tem acesso as funções de 
+				Professor se pode dar uma nota para um aluno
+				*/
 				input.nextLine();
 			}
 			students[i].setFinalGrade();
 			students[i].setApproved();
 			
-			// registra o ID do aluno automaticamente;
+			// Id is automatically registered, no need to type it in;
 			idNumber = 1000 +  i + 1;
 			students[i].setId(Integer.toString(idNumber));
-			// só para deixar melhor de visualizar
+			// Only visual
 			for(int j = 0; j < 3; j++) {
 				System.out.print('\n');
 			}
@@ -117,7 +128,7 @@ public class Main {
 					input.nextLine();
 					menu.alterStudentGrades(students, userChoice, i, valueFloat);
 				}
-				// Recalculando a nota final e se está aprovado ou não.
+				// Calculating again the final grade and if it's approved or not
 				students[userChoice].setFinalGrade();
 				students[userChoice].setApproved();
 				break;
@@ -125,7 +136,6 @@ public class Main {
 				System.out.println("\nOs dados finais dos alunos sao os seguintes:\n");
 				menu.displayAllStudents(studentsSize, students);
 				System.out.println("\n=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
-				// tentar printar só o primeiro nome dps
 				System.out.println("\n\nObrigado, professor!");
 				System.exit(0);
 				break;
