@@ -3,12 +3,11 @@ public class Professor extends User {
 	private String password;
 	
 	// Method to register a student grade
-	// Input para enviar um valor que vai ser registrado na variável grades da classe Students
+	// Input to send a value that will be registered in the variable grades from the Students class
 	public float RegisterGrades(float grade) {
 		return grade;
 	}
 	
-	// abaixo disso é tudo set e get simples, nada demais para comentar
 	// Login related
 	public void setLogin(String login) {
 		this.login = login;
