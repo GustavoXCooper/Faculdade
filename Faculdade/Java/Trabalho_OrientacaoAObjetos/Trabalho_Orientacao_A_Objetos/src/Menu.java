@@ -16,7 +16,7 @@ public class Menu {
 	
 	
 	
-	// Mudar o valor dos dados relacionados aos alunos
+	// Change the data related to the students
 	public void alterStudentEmail(Student[] students, int choice, String value) {
 		System.out.println("Email anterior: " + students[choice].getEmail());
 		students[choice].setEmail(value);
