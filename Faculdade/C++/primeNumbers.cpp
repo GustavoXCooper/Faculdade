@@ -1,7 +1,8 @@
 #include <iostream>
 #include <locale.h>
-
 using namespace std;
+
+// Finding prime numbers
 
 int primeNumbers[500], primeAmount = 0;
 
