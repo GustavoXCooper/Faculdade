@@ -3,10 +3,11 @@
 #include <Windows.h>
 using namespace std;
 
+/* This is the Life game, made by the mathematician John Horton Conway in the 70's. I saw this game on YouTube and thought it was awesome,
+so I decided to give it a try */
+
 const int ROWS = 20;
 const int COLS = 45;
-
-
 
 void initBoard(vector<vector<bool>>& board) { 
     int deadOrAlive;
@@ -30,16 +31,16 @@ void initBoard(vector<vector<bool>>& board) {
 
 bool isAlive(vector<vector<bool>>& board, int x, int y) {
     int alive = 0;
-
+    
     for (int i = -1; i <= 1; i++) { 
         for (int j = -1; j <= 1; j++) { 
-            // Não checa o próprio elemento
+            // Doesn't check itself
             if (i == 0 && j == 0) 
                 continue; 
-            // Checa se a vizinhança está dentro dos limites do tabuleiro
+            // Checks if the neighbor cell is inside the board
             if (x + i < 0 || x + i >= ROWS || y + j < 0 || y + j >= COLS) 
                 continue; 
-            // Checa se a célula vizinha está viva
+            // Checks if the neighbor cell is alive
             if (board[x + i][y + j]) 
                 alive++; 
         }
