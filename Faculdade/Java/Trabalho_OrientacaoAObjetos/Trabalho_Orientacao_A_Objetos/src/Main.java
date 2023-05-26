@@ -1,10 +1,8 @@
 import java.util.Scanner;
 
-//import java.util.Scanner;
-
 public class Main {
 	public static void main(String[] arg) {
-		// userChoice será usada em todas as tomadas de decisão do usuário
+		// userChoice will be used in the user's choices
 		int userChoice = 0;
 		int studentsSize = 0;
 		Scanner input = new Scanner(System.in);
