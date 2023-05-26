@@ -12,7 +12,7 @@ public class Student extends User {
 			this.approved = false;
 		}	
 	}
-	// Se aprovado = true, vai retornar a string "Aprovado", e se aprovado = false, retorna "Reprovado"
+	// If approved = true, will return a string "Aprovado"(Approved), if approved = false, returns "Reprovado"(disapproved)
 	public String getApproved() {
 		if(this.approved == true) {
 			return "Aprovado";
@@ -21,7 +21,6 @@ public class Student extends User {
 		}
 	}
 	
-	// Set e get simples, nada demais para comentar
 	public void setGrades(int i, float grade) {
 		this.grades[i] = grade;
 	}
@@ -31,6 +30,7 @@ public class Student extends User {
 	
 	// Final grade methods
 	// Soma os valores das notas do array "grades" e, na variável private finalGrade, registra o valor da soma/3;
+	// Sums all the values from array "grades" and, in the privade variable finalGrade, registrers the sum value/3
 	public void setFinalGrade() {
 		float finalGrade = 0;
 		for(int i = 0; i < 3; i++){
