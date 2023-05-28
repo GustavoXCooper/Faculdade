@@ -8,7 +8,7 @@ int main()
     
     // Project made in one afternoon as practice //
 
-    It's a simple program, not much to say, I meant to practice OOP and C++
+    It's a simple program, not much to say about it, I  just wanted to practice OOP and C++
 
     It probably has a few bugs, but I tried to fix as many as I could for now
 
